@@ -1,15 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Fusion Tables styling</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>Hello World!</h1>
-        <button id="btn">Click me</button>
+        <h1>Welcome To Use This Map</h1>
     </div>
+    <h2>Please enter the area you want to find</h2>
+    <h4>Borough</h4>
+    <form action="/action_page.php" method="get">
+    <input list="Borough" name="browser">
+    <datalist id="Borough">
+         <option value="The Bronx">
+         <option value="Brooklyn">
+         <option value="Manhattan">
+         <option value="Queens">
+         <option value="Richmond">
+    </datalist>
+    </form>
+    <h4>Population</h4>
+    <form action="/action_page.php" method="get">
+     <input list="Population" name="population">  
+     <datalist id="Population">
+         <option value="large">
+         <option value="medium">
+         <option value="small">
+     </datalist>
+    </form>
+    <h4>Crime rate</h4>
+    <form action="/action_page.php" method="get">
+     <input list="Crime rate" name="crime rate">  
+     <datalist id="Crime rate">
+         <option value="high">
+         <option value="medium">
+         <option value="low">
+     </datalist>
+    </form>
+    <h4>Rent</h4>
+     <form action="/action_page.php" method="get">
+     <input list="Rent" name="rent">  
+     <datalist id="Rent">
+         <option value="high">
+         <option value="medium">
+         <option value="low">
+     </datalist>
+    </form>
+    <br>
+    <input type="Submit">
+    <br>
+    <div id="map"></div>
     <script src="index.js"></script>
-</body>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL8j1Ivvl2Q7Q51X50x5UYpBGO-E8phFw&callback=initMap">
+    </script>
+  </body>
 </html>
